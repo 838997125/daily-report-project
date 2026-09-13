@@ -1,0 +1,17 @@
+{
+  "name": "daily-report-project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "钉钉工作日报自动化：把 AI 工作会话整理成日报写入钉钉知识库，按四层文档体系沉淀项目设计文档与问题决策档案。可完整复刻。",
+  "license": "MIT",
+  "scripts": {
+    "setup": "bash scripts/install.sh",
+    "check": "bash scripts/check.sh",
+    "discover": "bash scripts/discover-nodes.sh",
+    "new-project": "bash scripts/new-project-folder.sh"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "_comment": "dws CLI 由 scripts/install.sh 全局安装（npm i -g dingtalk-workspace-cli），不在这里声明本地依赖，以免装进 node_modules 却不在 PATH。"
+}

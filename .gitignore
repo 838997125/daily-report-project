@@ -1,0 +1,23 @@
+# 真实配置与凭证（含钉钉 AppKey/Secret、nodeId 等），绝不入库
+config/config.json
+config/*.local.json
+
+# dws 本机凭证目录（切勿复制/提交）
+.dws/
+
+# 运行产物：本地日报备份、锁、日志
+outputs/
+*.log
+/tmp/
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node
+node_modules/
+npm-debug.log*

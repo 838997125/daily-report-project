@@ -1,0 +1,36 @@
+{
+  "_说明": "daily-report 项目的环境配置。复制为 config/config.json 并填入你自己的值；config.json 不会提交到 git（见 .gitignore）。所有 nodeId 可通过 scripts/discover-nodes.sh 自动发现。",
+
+  "workspace_id": "你的知识库workspaceId",
+  "workspace_name": "战略部共享文档库",
+
+  "folder_daily_root": "日常文件夹nodeId",
+  "folder_daily": "日常/日报 文件夹nodeId（日报写这里）",
+  "folder_weekly": "日常/周报 文件夹nodeId",
+  "folder_project_archive": "日常/项目档案 文件夹nodeId（项目名目录的父目录）",
+
+  "reporter": {
+    "name": "<记录人>",
+    "doc_byline": "<记录人>（由 AI 助手整理）",
+    "oauth_note": "dws OAuth 登录身份即文档写入身份；本机用 <机器人名>，复刻时用你自己的钉钉应用"
+  },
+
+  "project_folders": {
+    "_说明": "项目名 -> 项目档案下的项目名目录 nodeId。新项目用 scripts/new-project-folder.sh 创建后会自动补到这里。",
+    "<内部项目名A：订单补单自动化>": "项目名目录nodeId"
+  },
+
+  "dingtalk_app": {
+    "_说明": "复刻时填你自己的钉钉企业内部应用（机器人）。写入 ~/.dws/app.json，切勿提交到 git。",
+    "clientId": "你的AppKey/robotClientId",
+    "clientSecret": "你的AppSecret",
+    "notify_group_chatid": "结果通知群chatid（可选）",
+    "notify_robot_code": "机器人robotCode（可选）"
+  },
+
+  "runtime": {
+    "local_backup_dir": "outputs/daily-reports",
+    "lock_file_pattern": "/tmp/daily-report-lock-YYYY-MM-DD",
+    "timezone": "Asia/Shanghai"
+  }
+}
